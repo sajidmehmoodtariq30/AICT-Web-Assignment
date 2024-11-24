@@ -1,0 +1,40 @@
+/* Navbar */
+nav {
+    display: flex;
+    width: 90vw;
+    height: 9vh;
+    margin: 0.8rem auto;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    background: var(--dark-color);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 50px;
+    margin: auto;
+}
+
+nav h1 {
+    margin: 0 50px 0 50px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light-green-color);
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--teal-color);
+}
