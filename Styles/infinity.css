@@ -1,0 +1,55 @@
+#infinity{
+    height: 55vh;
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    margin: 5rem;
+}
+
+svg{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+#outline {
+    stroke: #ededed;
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 2px, 242px;
+    stroke-dashoffset: 0;
+    animation: anim 1.6s linear infinite;
+    animation-delay: 1s;
+}
+
+#outline-bg{
+    stroke: #ededed;
+    opacity: 0.05;
+    fill: none;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+@keyframes anim {
+    12.5% {
+        stroke-dasharray: 33.99px, 242px;
+        stroke-dashoffset: -26.71px;
+    }
+
+    43.75% {
+        stroke-dasharray: 84.97px, 242px;
+        stroke-dashoffset: -84.97;
+    }
+
+    100% {
+        stroke-dasharray: 2px, 242px;
+        stroke-dashoffset: -242.29;
+    }
+}

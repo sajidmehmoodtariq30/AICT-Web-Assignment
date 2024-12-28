@@ -1,0 +1,93 @@
+#flowchart-container {
+    position: relative;
+    width: 98vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+#main-line {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 75%;
+    border: 2px solid;
+    color: white;
+}
+
+.block {
+    position: absolute;
+    width: 14rem;
+    height: 5rem;
+    border: 2px solid;
+    border-radius: 16px;
+    text-align: center;
+    padding: 30px 0;
+    background: var(--teal-color);
+    z-index: 1;
+}
+
+.block:hover {
+    color: var(--teal-color);
+    background: var(--dark-color);
+    border-color: #fff;
+}
+
+#top-block {
+    top: 0;
+    right: 42%;
+}
+
+#bottom-block {
+    bottom: 0;
+    right: 42%;
+}
+
+#block-1 {
+    top: 20%;
+    right: 20%;
+}
+
+#block-2 {
+    top: 36%;
+    left: 20%;
+}
+
+#block-3 {
+    top: 52%;
+    right: 20%;
+}
+
+#block-4 {
+    top: 68%;
+    left: 20%;
+}
+
+.line-horizontal {
+    width: 15vw;
+    height: 2px;
+    border: none;
+    position: absolute;
+    background: #fff;
+}
+
+#line-1{
+    top: 26.5%;
+}
+#line-2{
+    top: 42.5%;
+    left: 34.5%;
+}
+#line-3{
+    top: 58.5%;
+}
+#line-4{
+    top: 74.5%;
+    left: 34.5%;
+}

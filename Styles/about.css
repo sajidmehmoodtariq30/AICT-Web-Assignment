@@ -1,0 +1,145 @@
+.about-us-container {
+    position: relative;
+    width: 100%;
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bouncing Circles */
+.bouncing-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #387478;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: bounce 2s ease-out forwards;
+    z-index: 4;
+}
+
+.bouncing-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: zoom 2s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-100vh);
+    }
+    70% {
+        transform: translateY(0);
+    }
+    85% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Position for each circle (to align with the staircase bubbles) */
+.circle-1 {
+    animation-delay: 0s;
+    left: 15%;
+    top: 15%;
+}
+
+.circle-2 {
+    animation-delay: 0.5s;
+    left: 48%;
+    top: 35%;
+}
+
+.circle-3 {
+    animation-delay: 1s;
+    left: 78%;
+    top: 50%;
+}
+
+/* Bubbles */
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #387478;
+    position: absolute;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bubble:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Bubble Positions */
+.bubble:nth-child(1) {
+    top: 20%;
+    left: 20%;
+}
+
+.bubble:nth-child(2) {
+    top: 40%;
+    left: 50%;
+}
+
+.bubble:nth-child(3) {
+    top: 60%;
+    left: 80%;
+}
+
+/* Text Box */
+.text-box {
+    background-color: #387478;
+    color: #E2F1E7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: slide-in 1s ease-in forwards;
+}
+
+.text-box-1 {
+    animation-delay: 2.5s;
+    top: -3%;
+    right: 5%;
+}
+
+.text-box-2 {
+    animation-delay: 3s;
+    top: 17%;
+    right: -3%;
+}
+
+.text-box-3 {
+    animation-delay: 3.5s;
+    top: 37%;
+    right: -7%;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

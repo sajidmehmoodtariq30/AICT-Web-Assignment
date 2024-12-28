@@ -7,8 +7,9 @@ nav {
     align-items: center;
     top: 0;
     position: sticky;
-    background: var(--dark-color);
-    z-index: 1000;
+    background: var(--teal-color);
+    z-index: 10;
+    border-radius: 2rem;
 }
 
 nav ul {
@@ -32,9 +33,25 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: var(--light-green-color);
-    transition: color 0.3s;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: var(--dark-color);
+    transition: width 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--teal-color);
+    color: var(--dark-color);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }

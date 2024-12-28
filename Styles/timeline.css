@@ -1,0 +1,61 @@
+/* Header Styling */
+.timeline-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.timeline-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-header p {
+    font-size: 1.2rem;
+}
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-left: 3px solid var(--teal-color);
+}
+
+/* Timeline Event */
+.timeline-event {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 2rem;
+}
+
+/* Marker for Each Event */
+.marker {
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--teal-color);
+    border: 3px solid var(--light-green-color);
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Marker */
+.timeline-event:hover .marker {
+    transform: scale(1.3);
+}
+
+.event-content h2 {
+    font-size: 1.5rem;
+    color: #E2F1E7;
+    margin-bottom: 0.5rem;
+}
+
+.event-content p {
+    font-size: 1rem;
+    color: #BFDAD4; /* Lighter Teal for description */
+}
+

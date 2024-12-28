@@ -1,0 +1,207 @@
+/* Section Layout */
+.section {
+    position: relative;
+    height: 84vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* Central Image */
+.section img {
+    width: 300px;
+    border-radius: 50%;
+    z-index: 5;
+    margin: 2rem;
+}
+
+/* Buttons */
+#btn1,
+#btn2,
+#btn3,
+#btn4 {
+    position: absolute;
+}
+
+#btn1 {
+    top: 5%;
+    left: 14%;
+}
+
+#btn2 {
+    top: 5%;
+    right: 14%;
+}
+
+#btn3 {
+    bottom: 5%;
+    left: 14%;
+}
+
+#btn4 {
+    bottom: 5%;
+    right: 14%;
+}
+
+/* Lines */
+.line {
+    position: absolute;
+    background: var(--teal-color);
+    height: 3px;
+    z-index: 1;
+}
+
+.line::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 10px;
+    background: var(--light-green-color);
+    border-radius: 50%;
+    transform: translateX(-100%);
+    transition: none;
+}
+
+#line1,
+#line2,
+#line3,
+#line4 {
+    width: 235px;
+}
+
+#line1 {
+    top: 29%;
+    left: 10.5%;
+    transform: rotate(270deg);
+}
+
+#line2 {
+    top: 29%;
+    right: 10.5%;
+    transform: rotate(270deg);
+}
+
+#line3 {
+    bottom: 29%;
+    left: 10.5%;
+    transform: rotate(90deg);
+}
+
+#line4 {
+    bottom: 29%;
+    right: 10.5%;
+    transform: rotate(90deg);
+}
+
+#line5,
+#line6,
+#line7,
+#line8 {
+    width: 31.38vw;
+}
+
+#line5 {
+    top: 48%;
+    left: 50%;
+}
+
+#line6 {
+    top: 48%;
+    right: 50%;
+    transform: rotate(180deg);
+}
+
+#line7 {
+    top: 52%;
+    left: 50%;
+}
+
+#line8 {
+    top: 52%;
+    right: 50%;
+    transform: rotate(180deg);
+}
+
+#line1::after,
+#line2::after,
+#line3::after,
+#line4::after {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    animation: pulse-outward 3s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes pulse-outward {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 98%;
+    }
+}
+
+#line5::after,
+#line6::after,
+#line7::after,
+#line8::after {
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    animation: pulse-outward 3s linear infinite;
+}
+
+/* Clouds */
+
+.floating {
+    position: absolute;
+    padding: 1.5rem;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--teal-color);
+    border-radius: 16px;
+    font-size: 1rem;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.first-cloud {
+    top: 21.5%;
+    left: 7%;
+}
+
+.second-cloud {
+    top: 21.5%;
+    right: 7%;
+}
+
+.third-cloud {
+    bottom: 21.5%;
+    left: 7%;
+}
+
+.fourth-cloud {
+    bottom: 21.5%;
+    right: 7%;
+}
+
+
+#btn1:hover ~ .outer .first-cloud,
+#btn2:hover ~ .outer .second-cloud,
+#btn3:hover ~ .outer .third-cloud,
+#btn4:hover ~ .outer .fourth-cloud {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}

@@ -1,4 +1,3 @@
-/* Root Variables */
 :root {
     --dark-color: #243642;
     --teal-color: #387478;
@@ -10,7 +9,6 @@
     --section-padding: 50px;
 }
 
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +22,7 @@ body {
     color: var(--light-green-color);
     background-color: var(--dark-color);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h1,
@@ -42,21 +41,39 @@ hr {
 }
 
 button {
-    background-color: var(--teal-color);
-    color: var(--light-green-color);
-    width: 8rem;
-    height: 2.5rem;
-    border-radius: 16px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: background-color var(--transition-speed);
     position: absolute;
+    width: 9rem;
+    height: 3.8rem;
+    border: none;
+    font-size: 1rem;
     text-align: center;
-    z-index: 3;
+    cursor: pointer;
+    background: var(--teal-color);
+    color: var(--light-green-color);
+    border-radius: 10px;
+    z-index: 5; /* Ensure buttons are above other elements */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
     background-color: var(--light-green-color);
     color: var(--dark-color);
+    transform: scale(1.1);
+}
+
+/* Bounce Animation */
+.bounce:hover {
+    animation: bounce 1.5s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-8px);
+    }
 }
